@@ -44,6 +44,18 @@ if (workbox) {
             ]
         })
     )
+    wordbox.routing.registerRoute(
+        "https://api.rail.be/stations/?format=json",
+        new workbox.strategies.networkFirst({
+        cacheName: "api-cache",
+        plugins:[
+            new workbox.expiration.Plugin({
+                maxAgeSeconds: 30*24*60*60 //30 days
+            })
+        ]
+
+        })
+    )
 } else {
     console.log('OOh, workbox non chargé');
     
