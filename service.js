@@ -45,7 +45,7 @@ if (workbox) {
         })
     )
     wordbox.routing.registerRoute(
-        "https://api.rail.be/stations/?format=json",
+        "https://api.irail.be/stations/?format=json",
         new workbox.strategies.networkFirst({
         cacheName: "api-cache",
         plugins:[
