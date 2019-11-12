@@ -28,13 +28,15 @@ if (workbox) {
         },
         {"url" : "icon-96-96.png"
         }
+      
     ])
+
     workbox.routing.registerRoute (
         /(.*)\.(?:png|gif|jpg|css)$/,
-        workbox.strategies.CacheFirst({
+        new workbox.strategies.CacheFirst({
             cacheName: 'design-cache',
-            plugings: [
-                new workbox.expiration.Pugin({
+            plugins: [
+                new workbox.expiration.Plugin({
                     maxEntries: 50,
                     maxAgeSeconds: 30*24*60*60 //30 days
                 })

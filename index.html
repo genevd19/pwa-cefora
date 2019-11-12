@@ -22,28 +22,32 @@
     <meta name="msapplication-TileColor" content="#00D1B2">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#00D1B2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="button is-danger install hidden">Installer</a>
     <div class="wrapper">
-        <header>
-        <h1>PWA - Cefora 
+        <header class="hero is-primary">
+            <div class="hero-body>">
+        <h1 class="title">PWA - Cefora 
         </h1>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="" class="nav-bar-item is-active">Home</a></li>
+                <li><a href="" class="nav-bar-item">About</a></li>
+                <li><a href="" class="nav-bar-item">Contact</a></li>
             </ul>
         </nav>
-        <div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Moon.jpg"></div>
+       
     </header>
-    <main> </main>
+    <main class="container"><img src="moon.jpg" alt="image"></main>
     <footer>
         <p>&copy; 2019 - Cepegra</p>
     </footer>
     </div>
     <script src="sw-register.js"></script>
+    <script src="install.js"></script>
 </body>
 </html>
 

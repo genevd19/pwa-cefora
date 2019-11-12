@@ -25,5 +25,12 @@ nav li{
 nav a{
     color:white;
     text-decoration:none;
-
+}
+.hidden{
+    display: none;
+}
+.install{
+    position:fixed;
+    width:100%;
+    z-index: 1000;
 }
