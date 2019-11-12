@@ -27,8 +27,9 @@ if (workbox) {
         {"url" : "favicon.ico"
         },
         {"url" : "icon-96-96.png"
-        }
-      
+        },
+        {"url" : "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+        }   
     ])
 
     workbox.routing.registerRoute (
