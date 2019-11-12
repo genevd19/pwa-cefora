@@ -1,0 +1,13 @@
+body{
+    font-family: verdana;
+    font-size: 140%;
+}
+header{
+    background-color: rgb(140, 156, 121);
+    padding:2em;
+}
+footer{background-color: rgb(58, 71, 61);
+padding: 1em;
+font-size: .8em;
+text-align:center;
+}
