@@ -29,6 +29,18 @@ if (workbox) {
         {"url" : "icon-96-96.png"
         }
     ])
+    workbox.routing.registerRoute (
+        /(.*)\.(?:png|gif|jpg|css)$/,
+        workbox.strategies.CacheFirst({
+            cacheName: 'design-cache',
+            plugings: [
+                new workbox.expiration.Pugin({
+                    maxEntries: 50,
+                    maxAgeSeconds: 30*24*60*60 //30 days
+                })
+            ]
+        })
+    )
 } else {
     console.log('OOh, workbox non chargé');
     
