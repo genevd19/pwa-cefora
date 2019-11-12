@@ -29,6 +29,12 @@ if (workbox) {
         {"url" : "icon-96-96.png"
         },
         {"url" : "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+        },
+        {"url" : "sw-register.js"
+        },
+        {"url" : "install.js"
+        },
+        {"url" : "main.js"
         }   
     ])
 
@@ -46,11 +52,11 @@ if (workbox) {
     )
     workbox.routing.registerRoute(
         "https://api.irail.be/stations/?format=json",
-        new workbox.strategies.networkFirst({
-        cacheName: "api-cache",
-        plugins:[
-            new workbox.expiration.Plugin({
-                maxAgeSeconds: 30*24*60*60 //30 days
+        new workbox.strategies.NetworkFirst({
+            cacheName: 'api-cache',
+            plugins: [
+                new workbox.expiration.Plugin({
+                    maxAgeSeconds: 30*24*60*60 //30 days
             })
         ]
 
