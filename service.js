@@ -35,7 +35,9 @@ if (workbox) {
         {"url" : "install.js"
         },
         {"url" : "main.js"
-        }   
+        },
+        {"url" : "https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"
+        }    
     ])
 
     workbox.routing.registerRoute (
