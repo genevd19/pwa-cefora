@@ -11,3 +11,11 @@ padding: 1em;
 font-size: .8em;
 text-align:center;
 }
+nav ul{
+    display:flex;
+    list-style: none;
+}
+nav li{margin:2em;
+border-radius: 1em;
+padding:1em;
+border: 1px solid black}
